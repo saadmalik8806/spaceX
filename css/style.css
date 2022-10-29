@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins:wght@200&display=swap');
+*
+{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #6eff3e;
+    background: #1e9bff;
+    background: #191a1d;
+    background: black;
+    flex-direction: column ;
+    gap:40px;
+
+}
+
+a
+{
+    position: relative;
+    background: gray;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    padding: 10px 30px;
+    transition: 0.5s;
+    /* border: 2px solid red; */
+}
+
+a:hover
+{
+    letter-spacing: 0.25em;
+    background: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+    color: var(--clr);
+}
+
+a::before
+{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #27282c;
+    /* border: 2px solid red; */
+}
+
+a span
+{
+    /* border: 2px solid red; */
+    position:relative;
+    z-index: 1;
+}
+
+a i 
+{
+    position: absolute;
+    inset: 0;
+    display: block;
+    border: 2px solid var(--clr);
+}
+a i::before
+{
+    content: '';
+    border: 2px solid var(--clr);
+    /* border-radius: 5px; */
+    width: 10px;
+    height: 5px;
+    position: absolute  ;
+    left: 80%;
+    top: -3.5px;
+    background: #27282c;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+a:hover i::before
+{
+    width: 20px;
+    left: 20%;
+}
+
+/* copy */
+a i::after
+{
+    content: '';
+    border: 2px solid var(--clr);
+    width: 10px;
+    height: 5px;
+    position: absolute  ;
+    left: 20%;             /**/
+    bottom: -3.5px;         /**/
+    background: #27282c;
+    transition: 0.5s;
+}
+
+a:hover i::after
+{
+    width: 20px;
+    left: 80%;     /**/
+}
+/* copy end */
+
+
+
+/* <a href="#" style="--clr:#1e9bff">         <span>BUTTON</span>    <i></i>        </a> */
